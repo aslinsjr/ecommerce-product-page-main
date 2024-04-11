@@ -1,0 +1,50 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 10%;
+    border-bottom: 1px solid var(--grayish-blue);
+    padding-bottom: 2.5rem;
+    position: relative;
+}
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--dark-grayish-blue);
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+#cart-icon {
+    cursor: pointer;
+}
+
+.cart-and-profile {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#image-avatar {
+    width: 50px;
+}

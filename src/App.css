@@ -1,0 +1,73 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black-lightbox-background: hsla(0, 0%, 0%, 0.75);
+}
+
+#light-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black-lightbox-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1;
+}
+
+#light-box-img {
+    height: 85vh;
+    z-index: 2;
+}
+
+.navegate-btn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--white);
+    padding: 0.5rem;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#left-btn {
+    border-radius: 50% 0 0  50%;
+    margin-right: 5px;
+}
+
+#right-btn {
+    border-radius:  0 50% 50% 0;
+    margin-left: 5px;
+}
+
+.navegate-btn:hover {
+    transform: scale(1.15);
+}
+
+#close-box-btn { 
+    position: absolute;
+    top: 2%;
+    right: 30%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#close-box-btn:hover {
+    transform: scale(1.15);
+}
+
+@media screen and (max-width: 400px) {
+    
+}
