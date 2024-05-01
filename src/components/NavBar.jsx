@@ -16,8 +16,18 @@ const NavBar = ({cartProduct, handleClean}) => {
     }
   }
 
+  function handleMenuMoile() {
+    const navMobile = document.querySelector("nav")
+    navMobile.classList.toggle("show")
+    const background = document.querySelector(".background")
+    background.classList.toggle("mobile-show")
+    const body = document.querySelector("body")
+    body.classList.toggle("hidden-overflow")
+  }
+
   return (
     <div className='nav-bar'>
+      <img id='mobile-menu' onClick={() => handleMenuMoile() } src="public/images/icon-menu.svg" alt="Mobile Icon" />
       <div className="logo-and-nav">
         <img src="public/logo.svg" alt="Logo Img" />
         <nav>

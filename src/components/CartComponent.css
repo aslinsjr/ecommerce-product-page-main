@@ -99,3 +99,27 @@
         top: 60%;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .cart-container {
+        max-width:none;
+        top: 130%;
+        width: 100%;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    #cart {
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+
+    #product-image-cart {
+        width: 80px;
+    }
+
+    #product-cart-title {
+        font-size: 0.9rem;
+    }
+}

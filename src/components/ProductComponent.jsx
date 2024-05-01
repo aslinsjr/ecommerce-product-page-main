@@ -5,6 +5,15 @@ import { useState } from 'react'
 const ProductComponent = ({selectedImg, handleClick, handleCartAdd}) => {
 
     const [quantity, setQuantity] = useState(0)
+    const [selectedImgMobile, setSelectedImgMobile] = useState(1)
+
+    if (selectedImgMobile > 4) {
+        setSelectedImgMobile(1)
+    }
+
+    if (selectedImgMobile < 1) {
+        setSelectedImgMobile(4)
+    }
 
     if(quantity < 0) {
         setQuantity(0)
@@ -13,7 +22,9 @@ const ProductComponent = ({selectedImg, handleClick, handleCartAdd}) => {
   return (
     <div className='product-container'>
         <div className="images-show">
-            <img id='product-large-image' src="public/images/image-product-1.jpg" alt="Product Img 01" />
+            <img className='navegate-btn-mobile' id='left-btn-mobile' src="public/icon-previous.-white.svg" alt="Previus Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile -1)}/>
+            <img id='product-large-image' src={`public/images/image-product-${selectedImgMobile}.jpg`} alt={`Image ${selectedImgMobile}`} />
+            <img className='navegate-btn-mobile' id='right-btn-mobile' src="public/icon-next-white.svg" alt="Next Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile +1)}/>
             <div className="thumbnail-images">
                 <img id='1' style={selectedImg.includes("1-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail'  src="public/images/image-product-1-thumbnail.jpg" alt=" Product Image Thumbnail 01" onClick={(e) => handleClick(e)} />
                 <img id='2' style={selectedImg.includes("2-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="public/images/image-product-2-thumbnail.jpg" alt=" Product Image Thumbnail 02" onClick={(e) => handleClick(e)} />

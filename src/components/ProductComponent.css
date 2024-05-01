@@ -27,6 +27,11 @@
     border-radius: 0.5rem;
     width: 60px;
     cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+
+.thumbnail-images:hover > :not(:hover) {
+    opacity: 0.4;
 }
 
 .description-product {
@@ -131,4 +136,45 @@
 #add-cart:hover {
     transform: scale(1.05);
     opacity: 1;
+}
+
+.navegate-btn-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    #product-large-image {
+        width: 400px;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .description-product {
+        max-width: 400px;
+    }
+
+    .thumbnail-images {
+        display: none;
+    }
+    
+    .navegate-btn-mobile {
+        display: flex;
+        position: absolute;
+        top: 40vh;
+        width: 2rem;
+        filter:drop-shadow(1px 1px 1rem black) ;
+    }
+
+    #left-btn-mobile {
+        left: 0.5rem;
+    }
+
+    #right-btn-mobile {
+        right: 0.5rem;
+    }
 }

@@ -38,6 +38,7 @@ function App() {
 
     let addCartProduct = new Product(image, title, price.toFixed(2), quantity)
     setCartProduct(addCartProduct)
+    window.scrollTo(0,0)
   }
 
   function handleClean() {
@@ -45,7 +46,7 @@ function App() {
   }
   
   return (
-    <>
+    <div>
       {selectedImg !== "public/images/image-product-0.jpg" ? 
       <div id="light-box">
         <img id='close-box-btn' src="public/images/icon-close.svg" alt="Close Icon" onClick={() => setSelectedImgId(0)}/>
@@ -55,7 +56,8 @@ function App() {
       </div> : <></>}
       <NavBar cartProduct={cartProduct} handleClean={handleClean}/>
       <ProductComponent selectedImg={selectedImg} handleClick={handleClick} handleCartAdd={handleCartAdd}/>
-    </>
+      <div className="background"></div>
+    </div>
   )
 }
 

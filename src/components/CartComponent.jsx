@@ -1,5 +1,6 @@
 
 import './CartComponent.css'
+import { useEffect } from 'react'
 
 const CartComponent = ({cartProduct, handleClean}) => {
 
