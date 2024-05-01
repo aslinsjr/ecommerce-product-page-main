@@ -27,9 +27,9 @@ const NavBar = ({cartProduct, handleClean}) => {
 
   return (
     <div className='nav-bar'>
-      <img id='mobile-menu' onClick={() => handleMenuMoile() } src="public/images/icon-menu.svg" alt="Mobile Icon" />
+      <img id='mobile-menu' onClick={() => handleMenuMoile() } src="./icon-menu.svg" alt="Mobile Icon" />
       <div className="logo-and-nav">
-        <img src="public/logo.svg" alt="Logo Img" />
+        <img src="./logo.svg" alt="Logo Img" />
         <nav>
           <a href="#">Collections</a>
           <a href="#">Men</a>
@@ -39,8 +39,8 @@ const NavBar = ({cartProduct, handleClean}) => {
         </nav>
       </div>
       <div className="cart-and-profile">
-        <img id='cart-icon' onClick={() => handleShowCart()} src="public/images/icon-cart.svg" alt="Cart Icon" />
-        <img id="image-avatar" src="public/images/image-avatar.png" alt="Avatar Image" />
+        <img id='cart-icon' onClick={() => handleShowCart()} src="./icon-cart.svg" alt="Cart Icon" />
+        <img id="image-avatar" src="./image-avatar.png" alt="Avatar Image" />
       </div>
       {cartProduct.quantity || showCart ? <CartComponent cartProduct={cartProduct} handleClean={handleClean}/> : <></>}
     </div>

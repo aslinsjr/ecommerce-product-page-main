@@ -22,14 +22,14 @@ const ProductComponent = ({selectedImg, handleClick, handleCartAdd}) => {
   return (
     <div className='product-container'>
         <div className="images-show">
-            <img className='navegate-btn-mobile' id='left-btn-mobile' src="public/icon-previous.-white.svg" alt="Previus Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile -1)}/>
-            <img id='product-large-image' src={`public/images/image-product-${selectedImgMobile}.jpg`} alt={`Image ${selectedImgMobile}`} />
-            <img className='navegate-btn-mobile' id='right-btn-mobile' src="public/icon-next-white.svg" alt="Next Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile +1)}/>
+            <img className='navegate-btn-mobile' id='left-btn-mobile' src="./icon-previous.-white.svg" alt="Previus Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile -1)}/>
+            <img id='product-large-image' src={`./image-product-${selectedImgMobile}.jpg`} alt={`Image ${selectedImgMobile}`} />
+            <img className='navegate-btn-mobile' id='right-btn-mobile' src="./icon-next-white.svg" alt="Next Icon" onClick={() => setSelectedImgMobile(+selectedImgMobile +1)}/>
             <div className="thumbnail-images">
-                <img id='1' style={selectedImg.includes("1-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail'  src="public/images/image-product-1-thumbnail.jpg" alt=" Product Image Thumbnail 01" onClick={(e) => handleClick(e)} />
-                <img id='2' style={selectedImg.includes("2-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="public/images/image-product-2-thumbnail.jpg" alt=" Product Image Thumbnail 02" onClick={(e) => handleClick(e)} />
-                <img id='3' style={selectedImg.includes("3-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="public/images/image-product-3-thumbnail.jpg" alt=" Product Image Thumbnail 03" onClick={(e) => handleClick(e)} />
-                <img id='4' style={selectedImg.includes("4-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="public/images/image-product-4-thumbnail.jpg" alt=" Product Image Thumbnail 04" onClick={(e) => handleClick(e)} />
+                <img id='1' style={selectedImg.includes("1-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail'  src="./image-product-1-thumbnail.jpg" alt=" Product Image Thumbnail 01" onClick={(e) => handleClick(e)} />
+                <img id='2' style={selectedImg.includes("2-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="./image-product-2-thumbnail.jpg" alt=" Product Image Thumbnail 02" onClick={(e) => handleClick(e)} />
+                <img id='3' style={selectedImg.includes("3-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="./image-product-3-thumbnail.jpg" alt=" Product Image Thumbnail 03" onClick={(e) => handleClick(e)} />
+                <img id='4' style={selectedImg.includes("4-thumbnail") ? {opacity:'0.50'} : {}} className='thumbnail' src="./image-product-4-thumbnail.jpg" alt=" Product Image Thumbnail 04" onClick={(e) => handleClick(e)} />
             </div>
         </div>
         <div className="description-product">
@@ -45,11 +45,11 @@ const ProductComponent = ({selectedImg, handleClick, handleCartAdd}) => {
             </div>
             <div className="cart-add-options">
                 <div className="quantity-products">
-                    <button id='minus-btn' onClick={() => setQuantity(quantity - 1)}><img src="public/images/icon-minus.svg" alt="Minus Icon" /></button>
+                    <button id='minus-btn' onClick={() => setQuantity(quantity - 1)}><img src="./icon-minus.svg" alt="Minus Icon" /></button>
                     <p id='quantity'>{quantity}</p>
-                    <button id='minus-btn' onClick={() => setQuantity(quantity + 1)}><img src="public/images/icon-plus.svg" alt="Plus Icon" /></button>
+                    <button id='minus-btn' onClick={() => setQuantity(quantity + 1)}><img src="./icon-plus.svg" alt="Plus Icon" /></button>
                 </div>
-                <button id='add-cart' onClick={() => handleCartAdd(quantity)}><img src="public/images/icon-cart2.svg" alt="Cart Icon" />Add to cart</button>
+                <button id='add-cart' onClick={() => handleCartAdd(quantity)}><img src="./icon-cart2.svg" alt="Cart Icon" />Add to cart</button>
             </div>
         </div>
     </div>

@@ -1,6 +1,5 @@
 
 import './CartComponent.css'
-import { useEffect } from 'react'
 
 const CartComponent = ({cartProduct, handleClean}) => {
 
@@ -19,7 +18,7 @@ const CartComponent = ({cartProduct, handleClean}) => {
                 <p id="total-price">{"$" + (cartProduct.price * cartProduct.quantity).toFixed(2)}</p>
               </div>
             </div>
-            <img id='delete-icon' src="public/images/icon-delete.svg" alt="Delete Icon" onClick={() => handleClean()} />
+            <img id='delete-icon' src="./icon-delete.svg" alt="Delete Icon" onClick={() => handleClean()} />
         </div>
         <button id='checkout-btn' onClick={() => window.location.reload()}>Checkout</button>
         </>}
