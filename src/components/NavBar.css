@@ -75,6 +75,7 @@ nav a:hover {
     #mobile-menu {
         display: flex;
         z-index: 4;
+        width: 20px;
     }
 
     .show {

@@ -24,7 +24,7 @@ Frontend Mentor challenges help improve my coding skills by building realistic p
 ### Links
 
 - Solution URL: [Repository](https://github.com/aslinsjr/ecommerce-product-page-main)
-- Live Site URL: [Live Page](https://ecommerce-product-page-main-gules.vercel.app/)
+- Live Site URL: [Live Pagenpm run dev](https://ecommerce-product-page-main-gules.vercel.app/)
 
 ## My process
 
